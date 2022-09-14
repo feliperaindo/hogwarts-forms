@@ -10,50 +10,55 @@
 </head>
 
 <body>
-  <header>
+  <!-- requisito 1 -->
+  <header class="header">
     <h1 id="trybewarts-header-title">Trybewarts</h1>
+    <!-- requisito 2 -->
     <img class="trybewarts-header-logo" src="images/trybewarts-header-logo.svg" alt="Logo">
-    <form action="">
-      <label for=""><input type="email" name="email" placeholder="Email"></label>
+    <!-- requisito 3 -->
+    <form class="trybewarts-login">
+      <label><input type="email" name="email" placeholder="Email"></label>
+      <label><input type="password" name="password" placeholder="senha"></label>
       <button type="button">Entrar</button>
     </form>
-      <main>
-        <form action="" id="evaluation-form">
-          <label for="input-name"><input type="text" name="nome" id="input-name" placeholder="Nome"></label>
+    <main>
+      <form action="" id="evaluation-form">
+        <label for="input-name"><input type="text" name="nome" id="input-name" placeholder="Nome"></label>
 
-          <label for="input-lastname"><input type="text" name="sobrenome" id="input-lastname" placeholder="Sobrenome"></label>
+        <label for="input-lastname"><input type="text" name="sobrenome" id="input-lastname"
+            placeholder="Sobrenome"></label>
 
-          <label for="input-email"><input type="email" id="input-email" name="email" placeholder="Email"></label>
+        <label for="input-email"><input type="email" id="input-email" name="email" placeholder="Email"></label>
 
-          <label for="house">
-            <input type="select" id="house">
-            <option value="Pytherina" id="pytherina-house">Pytherina</option>
-            <option value="Gitnória" id="gitnoria-house">Gitnória</option>
-            <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
-            <option value="Corvinode" id="corvinode-house">Corvinode</option>
-          </label>
-          <section>
+        <label for="house">
+          <input type="select" id="house">
+          <option value="Pytherina" id="pytherina-house">Pytherina</option>
+          <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+          <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+          <option value="Corvinode" id="corvinode-house">Corvinode</option>
+        </label>
+        <section>
           <label id="label-rate">Como você avalia a Trybewarts?
           </label>
-            <input type="radio" value="1" name="rate">
-            <input type="radio" value="2" name="rate">
-            <input type="radio" value="3" name="rate">
-            <input type="radio" value="4" name="rate">
-            <input type="radio" value="5" name="rate">
-            <input type="radio" value="6" name="rate">
-            <input type="radio" value="7" name="rate">
-            <input type="radio" value="8" name="rate">
-            <input type="radio" value="9" name="rate">
-            <input type="radio" value="10" name="rate">
-          </section>
-          <section>
-            <label for="agreement" id="label-infos">Você concorda com o uso das informações acima?</label>
-            <input type="checkbox" id="agreement">
-          </section>
-          <button type="submit" id="submit-btn">Enviar</button>
-        </form>
-      </main>
-      <footer>Direitos reservados à Trybewarts©</footer>
+          <input type="radio" value="1" name="rate">
+          <input type="radio" value="2" name="rate">
+          <input type="radio" value="3" name="rate">
+          <input type="radio" value="4" name="rate">
+          <input type="radio" value="5" name="rate">
+          <input type="radio" value="6" name="rate">
+          <input type="radio" value="7" name="rate">
+          <input type="radio" value="8" name="rate">
+          <input type="radio" value="9" name="rate">
+          <input type="radio" value="10" name="rate">
+        </section>
+        <section>
+          <label for="agreement" id="label-infos">Você concorda com o uso das informações acima?</label>
+          <input type="checkbox" id="agreement">
+        </section>
+        <button type="submit" id="submit-btn">Enviar</button>
+      </form>
+    </main>
+    <footer>Direitos reservados à Trybewarts©</footer>
   </header>
 </body>
 
