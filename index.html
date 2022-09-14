@@ -24,76 +24,75 @@
     </form>
   </header>
 
-    <!-- Requisito 5 -->
-    <main>
-      <form action="" id="evaluation-form">
-        <label for="input-name"><input type="text" name="nome" id="input-name" placeholder="Nome"></label>
+  <!-- Requisito 5 -->
+  <main>
+    <form id="evaluation-form">
+      <!-- Requisito 8 -->
+      <label for="input-name"><input type="text" name="nome" id="input-name" placeholder="Nome"></label>
 
-        <label for="input-lastname"><input type="text" name="sobrenome" id="input-lastname"
-            placeholder="Sobrenome"></label>
+      <label for="input-lastname"><input type="text" name="sobrenome" id="input-lastname"
+          placeholder="Sobrenome"></label>
 
-        <label for="input-email"><input type="email" id="input-email" name="email" placeholder="Email"></label>
+      <label for="input-email"><input type="email" id="input-email" name="email" placeholder="Email"></label>
+      <!-- Requisito 9 -->
+      <label for="house">Escolha sua Casa:</label>
+      <select id="house" required>
+        <option value="Pytherina" id="pytherina-house">Pytherina</option>
+        <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+        <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+        <option value="Corvinode" id="corvinode-house">Corvinode</option>
+      </select>
+      <!--Requisito 12-->
+      <label>Qual sua família</label>
+      <input type="radio" value="Frontend" name="family">Frontend
+      <input type="radio" value="Backend" name="family">Backend
+      <input type="radio" value="FullStack" name="family">FullStack
 
-        <label for="house">
-          <input type="select" id="house">
-          <option value="Pytherina" id="pytherina-house">Pytherina</option>
-          <option value="Gitnória" id="gitnoria-house">Gitnória</option>
-          <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
-          <option value="Corvinode" id="corvinode-house">Corvinode</option>
-        </label>
-        <section>
-          <label id="label-rate">Como você avalia a Trybewarts?
-          </label>
-          <input type="radio" value="1" name="rate">
-          <input type="radio" value="2" name="rate">
-          <input type="radio" value="3" name="rate">
-          <input type="radio" value="4" name="rate">
-          <input type="radio" value="5" name="rate">
-          <input type="radio" value="6" name="rate">
-          <input type="radio" value="7" name="rate">
-          <input type="radio" value="8" name="rate">
-          <input type="radio" value="9" name="rate">
-          <input type="radio" value="10" name="rate">
-        </section>
-        <section>
-          <label for="agreement" id="label-infos">Você concorda com o uso das informações acima?</label>
-          <input type="checkbox" id="agreement">
-        </section>
-        <button type="submit" id="submit-btn">Enviar</button>
-      </form>
-      <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="Logo Grande">
-    </main>
+      <!--Requisito 13-->
+      <label id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
+      <input type="checkbox" value="HoFs" class="subject"> HoFs
+      <!--Informação de referencia-->
+      <input type="checkbox" value="Jest" class="subject"> Jest
+      <!--Informação de referencia-->
+      <input type="checkbox" value="Promises" class="subject">Promises
+      <!--Informação de referencia-->
+      <input type="checkbox" value="React" class="subject">React
+      <!--Informação de referencia-->
+      <input type="checkbox" value="SQL" class="subject">SQL
+      <!--Informação de referencia-->
+      <input type="checkbox" value="Python" class="subject">Python
+      <!--Informação de referencia-->
+      <!-- Requisito 14 -->
+      <section>
+        <label id="label-rate">Como você avalia a Trybewarts?</label>
+        <input type="radio" value="1" name="rate">1
+        <input type="radio" value="2" name="rate">2
+        <input type="radio" value="3" name="rate">3
+        <input type="radio" value="4" name="rate">4
+        <input type="radio" value="5" name="rate">5
+        <input type="radio" value="6" name="rate">6
+        <input type="radio" value="7" name="rate">7
+        <input type="radio" value="8" name="rate">8
+        <input type="radio" value="9" name="rate">9
+        <input type="radio" value="10" name="rate">10
+      </section>
+      <section>
+        <!--Requisito 15-->
+        <label class="textarea">Deixe seu comentário:</label>
+        <textarea maxlength="500" cols="30" rows="10" class="textarea"></textarea>
+        <!-- Requisito 16 -->
+        <label for="agreement" id="label-infos">Você concorda com o uso das informações acima?</label>
+        <input type="checkbox" id="agreement">
+      </section>
+      <!-- Requisito 17 -->
+      <button type="submit" id="submit-btn">Enviar</button>
     </form>
+    <!-- Requisito 7 -->
+    <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="Logo Grande">
+  </main>
+  </form>
+  <!-- Requisito 19 -->
+  <footer>Direitos reservados à Trybewarts©</footer>
+</body>
 
-
-<!--inclusão da questão 12-->
-<form action="">
-<label for=""></label>Qual sua família
-<input type="radio" value="Frontend"  name="" id="">
-<input type="radio" value="Backend"   name="" id="">
-<input type="radio" value="FullStack" name="" id="">
-</form>
-
-
-
-      <!--inclusão da questão 13-->
-<form action=""></form>
-
-<label for="" id="label-content">
-<input type="checkbox"  value="HoFs" name=""> HoFs <!--Informação de referencia-->
-<input type="checkbox"  value="Jest" name=""> Jest<!--Informação de referencia-->
-<input type="checkbox"  value="Promises" name="">Promises<!--Informação de referencia-->
-<input type="checkbox"  value="React" name="">React<!--Informação de referencia-->
-<input type="checkbox"  value="SQL" name="">SQL<!--Informação de referencia-->
-<input type="checkbox"  value="Python" name="">Python<!--Informação de referencia-->
-</label>
-
-<!--inclusão da questão 15-->
-
-<form action=""><label for="">Deixe seu comentário:
-<textarea maxlength="500" name="" id="" cols="30" rows="10"></textarea>
-</label>
-</form>
-<footer>Direitos reservados à Trybewarts©</footer>
-  </body>
 </html>
