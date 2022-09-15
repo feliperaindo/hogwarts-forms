@@ -1,12 +1,14 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 header {
   display: flex;
   background-color: rgb(50, 167, 145);
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 main {
@@ -28,6 +30,8 @@ main {
 
 form {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 #position-name { /* Inclusão 10ºR: sobrenome à direita. */
@@ -36,4 +40,9 @@ form {
 
 #position-email-house { /* Inclusão 10ºR: casa à direita. */
   display: flex;
+}
+
+#position-radio {
+  display: flex;
+  flex-direction: column;
 }
