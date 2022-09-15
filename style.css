@@ -9,20 +9,23 @@ header {
   background-color: rgb(50, 167, 145);
 }
 
+main {
+  display: flex; /* Inclusão 5ºR: transformando em flex-container. */
+}
+
 
 #evaluation-form {
   display: flex;
   flex-direction: column;
+  width: 675px; /* Inclusão 5ºR:largura igual a 675px; */
 }
 
 #trybewarts-forms-logo {
   height: 500px;
+  float: right; /* Inclusão 7ºR: Logo na direita. */
 }
+
 
 form {
   display: flex;
-}
-
-#trybewarts-forms-logo {
-  height: 500px;
 }
