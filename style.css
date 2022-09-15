@@ -22,10 +22,14 @@ main {
 
 #trybewarts-forms-logo {
   height: 500px;
-  float: right; /* Inclusão 7ºR: Logo na direita. */
+  float: right; /* Inclusão 7ºR: Logo à direita. */
 }
 
 
 form {
+  display: flex;
+}
+
+#position-name { /* Inclusão 10ºR: sobrenome à direita. */
   display: flex;
 }
