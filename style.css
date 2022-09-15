@@ -1,14 +1,44 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} */
+}
 
-header {
+/* Requisito 1 */
+.header {
   display: flex;
   background-color: rgb(50, 167, 145);
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.header-div {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.header-div img {
+  width: 60px;
+  padding: 5px;
+}
+
+#trybewarts-header-title {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-div form {
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+}
+
+#button-one {
+  width: 60px;
+  height: 40px;
 }
 
 main {
@@ -20,18 +50,12 @@ main {
   display: flex;
   flex-direction: column;
   width: 675px; /* Inclusão 5ºR:largura igual a 675px; */
+  justify-content: space-between;
 }
 
 #trybewarts-forms-logo {
   height: 500px;
   float: right; /* Inclusão 7ºR: Logo à direita. */
-}
-
-
-form {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
 }
 
 #position-name { /* Inclusão 10ºR: sobrenome à direita. */
