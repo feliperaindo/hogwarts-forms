@@ -18,11 +18,13 @@
     <!-- requisito 4 -->
     <h1 id="trybewarts-header-title">Trybewarts</h1>
     <!-- requisito 3 -->
-    <form class="trybewarts-login">
-      <label><input type="email" name="email" placeholder="Email"></label>
-      <label><input type="password" name="password" placeholder="Senha"></label>
+    <form method="GET" class="trybewarts-login">
+      <div id="validation">
+      <label><input id="validation-one" type="email" name="email" placeholder="Email"></label>
+      <label><input id="validation-two" type="password" name="password" placeholder="Senha"></label>
       <!--Correção do atributo senha (Alterado para 'S' maiusculo)-->
-      <button type="button">Entrar</button>
+    </div>
+      <button id="button-one" type="submit">Entrar</button>
     </form>
   </header>
   <!-- Requisito 5 -->
@@ -127,6 +129,7 @@
   </main>
   <!-- Requisito 19 -->
   <footer>Direitos reservados à Trybewarts©</footer>
+  <script src="/script.js"></script>
 </body>
 
 </html>
