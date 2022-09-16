@@ -68,7 +68,15 @@ main {
 
 #position-radio {
   display: flex;
+  border: 1px solid red;
+}
+
+.second-part-form {
+  display: flex;
   flex-direction: column;
+  justify-content: left;
+  padding: 5px;
+  margin: 5px;
 }
 
 #validation {
@@ -92,4 +100,10 @@ main {
   height: 40px;
   margin: 5px;
   padding: 0;
+}
+
+hr {
+  width: 96%;
+  background-color: black;
+  height: 2px;
 }
