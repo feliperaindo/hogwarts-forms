@@ -42,10 +42,11 @@ main {
 
 
 #evaluation-form {
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
-  width: 675px; /* Inclusão 5ºR:largura igual a 675px; */
-  border: 1px solid red;
+  align-items: center;
+  width: 675px; /* Inclusão 5ºR:largura igual a 675px; border: 1px solid red; */
 }
 
 #trybewarts-forms-logo {
@@ -53,12 +54,16 @@ main {
   float: right; /* Inclusão 7ºR: Logo à direita. */
 }
 
-#position-name { /* Inclusão 10ºR: sobrenome à direita. */
+.position-name { /* Inclusão 10ºR: sobrenome à direita. */
   display: flex;
+  justify-content: space-between;
+  min-width: 500px;
+  margin-bottom: 20px;
 }
 
-#position-email-house { /* Inclusão 10ºR: casa à direita. */
+.first-part-form {
   display: flex;
+  flex-direction: column;
 }
 
 #position-radio {
