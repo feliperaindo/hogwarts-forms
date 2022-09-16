@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/libs/bootstrap.css">
 </head>
 
 <body>
@@ -15,37 +16,41 @@
 
     <!-- requisito 2 -->
     <div class="header-div">
-    <img class="trybewarts-header-logo" src="images/trybewarts-header-logo.svg" alt="Logo">
+      <img class="trybewarts-header-logo" src="images/trybewarts-header-logo.svg" alt="Logo">
     </div>
     <!-- requisito 4 -->
-      <h1 id="trybewarts-header-title">Trybewarts</h1>
+    <h1 id="trybewarts-header-title">Trybewarts</h1>
     <!-- requisito 3 -->
     <div class="header-div">
-    <form method="GET" class="trybewarts-login">
-      <div id="validation">
-      <label><input id="validation-one" type="email" name="email" placeholder="Email"></label>
-      <label><input id="validation-two" type="password" name="password" placeholder="Senha"></label>
-      </div>
-      <button id="button-one" type="submit">Entrar</button>
-    </form>
+      <form method="GET" class="trybewarts-login">
+        <div id="validation">
+          <input id="validation-one" type="email" name="email" placeholder="Email"
+              class="form-control-sm">
+          <input id="validation-two" type="password" name="password" placeholder="Senha"
+              class="form-control-sm">
+        </div>
+        <button id="button-one" type="submit" class="btn btn-light">Entrar</button>
+      </form>
     </div>
   </header>
+
   <!-- Requisito 5 -->
   <main>
-
     <form id="evaluation-form">
       <!-- Requisito 8 -->
-      <div id="position-name">
+      <div id="position-name" class="mb-3">
         <!--Criando div para posicionamento requisito 10-->
-        <label for="input-name"><input type="text" name="nome" id="input-name" placeholder="Nome"></label>
+        <label for="input-name"><input type="text" name="nome" id="input-name" placeholder="Nome"
+            class="form-control-sm"></label>
 
-        <label for="input-lastname"><input type="text" name="sobrenome" id="input-lastname"
-            placeholder="Sobrenome"></label>
+        <label for="input-lastname"><input type="text" name="sobrenome" id="input-lastname" placeholder="Sobrenome"
+            class="form-control-sm"></label>
       </div>
 
       <div id="position-email-house">
         <!--Criando div para posicionamento requisito 11-->
-        <label for="input-email"><input type="email" id="input-email" name="email" placeholder="Email"></label>
+        <label for="input-email"><input class="form-control-sm" type="email" id="input-email" name="email"
+            placeholder="Email"></label>
         <!-- Requisito 9 -->
         <label for="house">Escolha sua Casa:</label>
         <select id="house" required>
@@ -122,10 +127,10 @@
         <textarea maxlength="500" cols="30" rows="10" class="textarea"></textarea>
         <!-- Requisito 16 -->
         <label for="agreement" id="label-infos">Você concorda com o uso das informações acima?</label>
-        <input type="checkbox" id="agreement">
+        <input type="checkbox" value="true" id="agreement">
       </section>
       <!-- Requisito 17 -->
-      <button type="submit" id="submit-btn">Enviar</button>
+      <button type="submit" id="submit-btn" class="btn btn-secondary" disabled>Enviar</button>
     </form>
     <!-- Requisito 7 -->
     <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="Logo Grande">
