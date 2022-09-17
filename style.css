@@ -1,14 +1,39 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} */
+}
 
-header {
+/* Requisito 1 */
+.header {
   display: flex;
   background-color: rgb(50, 167, 145);
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.header-div {
+  text-align: center;
+  display: flex;
+  align-content: space-between;
+  align-items: center;
+}
+
+.trybewarts-header-logo {
+  width: 60px;
+  padding: 5px;
+}
+
+#trybewarts-header-title {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trybewarts-login {
+  display: flex;
+  align-items: center;
 }
 
 main {
@@ -17,32 +42,99 @@ main {
 
 
 #evaluation-form {
+  margin-top: 1%;
+  box-shadow: 0 0 15px 5px rgb(136, 136, 136);
   display: flex;
   flex-direction: column;
-  width: 675px; /* Inclusão 5ºR:largura igual a 675px; */
+  align-items: center;
+  width: 675px; /* Inclusão 5ºR:largura igual a 675px; border: 1px solid red; */
 }
 
 #trybewarts-forms-logo {
   height: 500px;
-  float: right; /* Inclusão 7ºR: Logo à direita. */
 }
 
-
-form {
+.position-name { /* Inclusão 10ºR: sobrenome à direita. */
   display: flex;
-  flex-flow: row wrap;
   justify-content: space-between;
+  min-width: 500px;
+  margin-bottom: 20px;
 }
 
-#position-name { /* Inclusão 10ºR: sobrenome à direita. */
+.first-part-form {
   display: flex;
-}
-
-#position-email-house { /* Inclusão 10ºR: casa à direita. */
-  display: flex;
+  flex-direction: column;
 }
 
 #position-radio {
   display: flex;
+}
+
+.second-part-form {
+  display: flex;
   flex-direction: column;
+  justify-content: left;
+  padding: 5px;
+  margin: 5px;
+}
+
+#validation {
+  display: flex;
+  flex-direction: column;
+}
+
+#validation input {
+  margin: 5px 10px;
+}
+
+#button-one {
+  width: 60px;
+  height: 40px;
+  margin: 5px;
+  padding: 0;
+}
+
+#submit-btn {
+  width: 60px;
+  height: 40px;
+  margin: 2%;
+  padding: 0;
+  margin-left: 45%;
+}
+
+
+hr {
+  width: 96%;
+  background-color: black;
+  height: 2px;
+}
+
+#centralizando {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 0.5%;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+}
+
+#movendoTextarea {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+#label-rate {
+  margin-top: 2%;
+}
+
+#label-infos {
+  margin-top: 2%;
 }
