@@ -23,8 +23,8 @@
     <div class="header-div">
       <form method="GET" class="trybewarts-login">
         <div id="validation">
-          <input id="validation-one" type="email" name="email" placeholder="Email" class="form-control-sm">
-          <input id="validation-two" type="password" name="password" placeholder="Senha" class="form-control-sm">
+          <input id="validation-one" type="email" name="email" placeholder="Email" class="form-control-sm" autocomplete="email">
+          <input id="validation-two" type="password" name="password" placeholder="Senha" class="form-control-sm" autocomplete="current-password">
         </div>
         <button id="button-one" type="submit" class="btn btn-light">Entrar</button>
       </form>
@@ -34,7 +34,7 @@
   <!-- Requisito 5 -->
   <main>
     <div id="centralizando">
-      <form id="evaluation-form">
+      <form id="evaluation-form" method="GET">
         <h2 class="display-6">Formulário de Cadastro</h2>
         <p>Preencha os campos abaixo para dar prosseguimento ao cadastro.</p>
 
@@ -61,7 +61,8 @@
             <!-- Requisito 9 -->
             <div class="first-part-form">
               <label for="house">Escolha sua Casa:</label>
-              <select id="house" class="form-control-sm" required>
+              <select id="house" class="form-control-sm">
+                <option value="" hidden disabled selected id="select-option">--selecione uma opção--</option>
                 <option value="Pytherina" id="pytherina-house">Pytherina</option>
                 <option value="Gitnória" id="gitnoria-house">Gitnória</option>
                 <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
@@ -102,27 +103,28 @@
               <label id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
             </div>
             <div>
-              <input type="checkbox" value="HoFs" class="subject"> HoFs
+              <label for="hofs"><input type="checkbox" value="HoFs" class="subject" id="hofs">HoFs</label>
               <!--Informação de referencia-->
             </div>
             <div>
-              <input type="checkbox" value="Jest" class="subject"> Jest
+              <label for="jest"><input type="checkbox" value="Jest" class="subject" id="jest">Jest</label>
               <!--Informação de referencia-->
             </div>
             <div>
-              <input type="checkbox" value="Promises" class="subject">Promises
+              <label for="promises"><input type="checkbox" value="Promises" class="subject"
+                  id="promises">Promises</label>
               <!--Informação de referencia-->
             </div>
             <div>
-              <input type="checkbox" value="React" class="subject">React
+              <label for="react"><input type="checkbox" value="React" class="subject" id="react">React</label>
               <!--Informação de referencia-->
             </div>
             <div>
-              <input type="checkbox" value="SQL" class="subject">SQL
+              <label for="sql"><input type="checkbox" value="SQL" class="subject" id="sql">SQL</label>
               <!--Informação de referencia-->
             </div>
             <div>
-              <input type="checkbox" value="Python" class="subject">Python
+              <label for="python"><input type="checkbox" value="Python" class="subject" id="python">Python</label>
               <!--Informação de referencia-->
             </div>
           </div>
@@ -131,16 +133,16 @@
           <!-- Requisito 14 -->
           <section>
             <label id="label-rate">Como você avalia a Trybewarts?</label>
-            <input type="radio" value="1" name="rate">1
-            <input type="radio" value="2" name="rate">2
-            <input type="radio" value="3" name="rate">3
-            <input type="radio" value="4" name="rate">4
-            <input type="radio" value="5" name="rate">5
-            <input type="radio" value="6" name="rate">6
-            <input type="radio" value="7" name="rate">7
-            <input type="radio" value="8" name="rate">8
-            <input type="radio" value="9" name="rate">9
-            <input type="radio" value="10" name="rate">10
+            <label for="1"><input type="radio" value="1" name="rate" id="1">1</label>
+            <label for="2"><input type="radio" value="2" name="rate" id="2">2</label>
+            <label for="3"><input type="radio" value="3" name="rate" id="3">3</label>
+            <label for="4"><input type="radio" value="4" name="rate" id="4">4</label>
+            <label for="5"><input type="radio" value="5" name="rate" id="5">5</label>
+            <label for="6"><input type="radio" value="6" name="rate" id="6">6</label>
+            <label for="7"><input type="radio" value="7" name="rate" id="7">7</label>
+            <label for="8"><input type="radio" value="8" name="rate" id="8">8</label>
+            <label for="9"><input type="radio" value="9" name="rate" id="9">9</label>
+            <label for="10"><input type="radio" value="10" name="rate" id="10">10</label>
           </section>
           <section>
             <!--Requisito 15-->
