@@ -34,6 +34,7 @@
   <!-- Requisito 5 -->
   <main>
     <div id="centralizando">
+      <div id="form-data"></div>
       <form id="evaluation-form">
         <h2 class="display-6">Formulário de Cadastro</h2>
         <p>Preencha os campos abaixo para dar prosseguimento ao cadastro.</p>
@@ -80,67 +81,66 @@
               <label id="label-family">Qual sua família?</label>
             </div>
             <!--Incluindo id label-family-->
-            <div class="second-part-form">
-              <div>
-                <input type="radio" value="Frontend" name="family" id="frontend">
-                <label for="frontend">Frontend</label>
-              </div>
-              <div>
-                <input type="radio" value="Backend" name="family" id="backend">
-                <label for="backend">Backend</label>
-              </div>
-              <div>
-                <input type="radio" value="FullStack" name="family" id="fullStack">
-                <label for="fullStack">FullStack</label>
-              </div>
-            </div>
-          </div>
+            <div id="familiaRet" class="second-part-form">
 
-          <!--Requisito 13-->
-          <div>
-            <div>
-              <label id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
+              <label for="frontend">
+                <input class="resutInp " type="radio" value="Frontend" name="family" id="frontend">Frontend
+              </label>
+
+              <label for="backend">
+                <input class="resutInp" type="radio" value="Backend" name="family" id="backend">Backend
+              </label>
+
+              <label for="fullStack">
+                <input class="resutInp" type="radio" value="FullStack" name="family" id="fullStack">FullStack
+              </label>
             </div>
+
+            <!--Requisito 13-->
             <div>
-              <input type="checkbox" value="HoFs" class="subject"> HoFs
-              <!--Informação de referencia-->
+              <div>
+                <label id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
+              </div>
+              <div>
+                <input type="checkbox" value="HoFs" class="subject"> HoFs
+                <!--Informação de referencia-->
+              </div>
+              <div>
+                <input type="checkbox" value="Jest" class="subject"> Jest
+                <!--Informação de referencia-->
+              </div>
+              <div>
+                <input type="checkbox" value="Promises" class="subject">Promises
+                <!--Informação de referencia-->
+              </div>
+              <div>
+                <input type="checkbox" value="React" class="subject">React
+                <!--Informação de referencia-->
+              </div>
+              <div>
+                <input type="checkbox" value="SQL" class="subject">SQL
+                <!--Informação de referencia-->
+              </div>
+              <div>
+                <input type="checkbox" value="Python" class="subject">Python
+                <!--Informação de referencia-->
+              </div>
             </div>
-            <div>
-              <input type="checkbox" value="Jest" class="subject"> Jest
-              <!--Informação de referencia-->
-            </div>
-            <div>
-              <input type="checkbox" value="Promises" class="subject">Promises
-              <!--Informação de referencia-->
-            </div>
-            <div>
-              <input type="checkbox" value="React" class="subject">React
-              <!--Informação de referencia-->
-            </div>
-            <div>
-              <input type="checkbox" value="SQL" class="subject">SQL
-              <!--Informação de referencia-->
-            </div>
-            <div>
-              <input type="checkbox" value="Python" class="subject">Python
-              <!--Informação de referencia-->
-            </div>
-          </div>
         </section>
         <section>
           <!-- Requisito 14 -->
           <section>
             <label id="label-rate">Como você avalia a Trybewarts?</label>
-            <input type="radio" value="1" name="rate">1
-            <input type="radio" value="2" name="rate">2
-            <input type="radio" value="3" name="rate">3
-            <input type="radio" value="4" name="rate">4
-            <input type="radio" value="5" name="rate">5
-            <input type="radio" value="6" name="rate">6
-            <input type="radio" value="7" name="rate">7
-            <input type="radio" value="8" name="rate">8
-            <input type="radio" value="9" name="rate">9
-            <input type="radio" value="10" name="rate">10
+            <input class="nota" type="radio" value="1" name="rate">1
+            <input class="nota" type="radio" value="2" name="rate">2
+            <input class="nota" type="radio" value="3" name="rate">3
+            <input class="nota" type="radio" value="4" name="rate">4
+            <input class="nota" type="radio" value="5" name="rate">5
+            <input class="nota" type="radio" value="6" name="rate">6
+            <input class="nota" type="radio" value="7" name="rate">7
+            <input class="nota" type="radio" value="8" name="rate">8
+            <input class="nota" type="radio" value="9" name="rate">9
+            <input class="nota" type="radio" value="10" name="rate">10
           </section>
           <section>
             <!--Requisito 15-->
