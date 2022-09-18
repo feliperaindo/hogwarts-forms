@@ -28,11 +28,11 @@ function activeButton() {
 }
 
 function contador(e) {
+  const doide = e.target.maxLength - e.target.textLength;
   if (textarea.value > '') {
-    const doide = e.target.maxLength - e.target.textLength;
-    counter.innerText = doide;
+    counter.innerText = `você ainda pode usar ${doide} caracteres`;
   } else {
-    counter.innerText = '500';
+    counter.innerText = '500 caracteres restantes';
   }
 }
 
