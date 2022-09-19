@@ -122,11 +122,28 @@ function applyRateText(object, element) {
   element.appendChild(text);
 }
 
+function resetpage() {
+  const getNewForm = document.getElementById('toInfo');
+  getNewForm.style.cssText = '';
+}
+
+function toInfoCSS() {
+  const getForm = document.getElementById('evaluation-form');
+  getForm.style.display = 'none';
+
+  const getNewForm = document.getElementById('toInfo');
+  getNewForm.style.cssText = `margin-top: 1%;
+  box-shadow: 0 0 15px 5px rgb(136, 136, 136);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 675px;`;
+}
+
 function modifyPage() {
   const data = getData();
 
-  const getForm = document.getElementById('evaluation-form');
-  getForm.style.visibility = 'hidden';
+  toInfoCSS();
 
   const getDiv = document.getElementById('toInfo');
 
@@ -143,3 +160,5 @@ textarea.addEventListener('keydown', contador);
 btn.addEventListener('click', inputAlert);
 checkBox.addEventListener('change', activeButton);
 btnFinal.addEventListener('click', modifyPage);
+
+window.onload = resetpage;
