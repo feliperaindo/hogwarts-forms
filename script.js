@@ -5,6 +5,8 @@ const checkBox = document.getElementById('agreement');
 const textarea = document.getElementById('textarea');
 const counter = document.getElementById('counter');
 const btnFinal = document.getElementById('submit-btn');
+const familyCheck = document.getElementsByName('family');
+const avaliationCheck = document.getElementsByName('rate');
 
 function inputAlert() {
   if ((inputEmail.value === 'tryber@teste.com') && (inputSenha.value === '123456')) {
@@ -27,9 +29,9 @@ function activeButton() {
 }
 
 function contador(e) {
+  const doide = e.target.maxLength - e.target.textLength;
   if (textarea.value > '') {
-    const contCar = e.target.maxLength - e.target.textLength;
-    counter.innerText = contCar;
+    counter.innerText = `você ainda pode usar ${doide} caracteres`;
   } else {
     counter.innerText = '500 caracteres restantes';
   }
@@ -40,38 +42,100 @@ function createElement(element) {
   return elementToCreate;
 }
 
-function familyChecked() {
-  const familyCheck = document.getElementsByName('family');
-
-  for (let index = 0; index < familyCheck.length; index += 1) {
-    if (familyCheck[index].checkBox) {
-      return familyCheck[index].value;
+function radioChecked(array) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index].checked) {
+      return array[index].value;
     }
   }
   return '';
 }
 
+function contentChecked() {
+  const contents = document.getElementsByName('content');
+  const checks = [];
+
+  for (let index = 0; index < contents.length; index += 1) {
+    if (contents[index].checked) {
+      checks.push(contents[index].value);
+    }
+  }
+  return checks;
+}
+
 function getData() {
   const firstName = document.querySelector('#input-name').value;
   const lastName = document.querySelector('#input-lastname').value;
-  const getFamilyValue = familyChecked();
+  const getFamilyValue = radioChecked(familyCheck);
+  const getContentsChecks = contentChecked();
+  const getRateCheck = radioChecked(avaliationCheck);
 
   const data = {
     name: `${firstName} ${lastName}`,
     email: document.querySelector('#input-email').value,
     house: document.querySelector('#house').value,
     family: getFamilyValue,
-    content: [],
-    avaliation: [],
+    content: getContentsChecks,
+    avaliation: getRateCheck,
+    text: document.getElementById('textarea').value,
   };
+  sessionStorage.removeItem('dataPage');
+  sessionStorage.setItem('dataPage', JSON.stringify(data));
   return data;
 }
 
+function applyNameEmailHouseFamily(object, element) {
+  const name = createElement('p');
+  name.innerText = `Nome: ${object.name}`;
+  element.appendChild(name);
+
+  const email = createElement('p');
+  email.innerText = `Email: ${object.email}`;
+  element.appendChild(email);
+
+  const house = createElement('p');
+  house.innerText = `Casa: ${object.house}`;
+  element.appendChild(house);
+
+  const family = createElement('p');
+  family.innerText = `Família: ${object.family}`;
+  element.appendChild(family);
+}
+
+function applyContent(object, element) {
+  const content = createElement('p');
+  content.innerText = 'Matérias: ';
+
+  for (let index = 0; index < object.content.length; index += 1) {
+    content.innerText += `${object.content[index]}, `;
+  }
+  element.appendChild(content);
+}
+
+function applyRateText(object, element) {
+  const rate = createElement('p');
+  rate.innerText = `Avaliação: ${object.avaliation}`;
+  element.appendChild(rate);
+
+  const text = createElement('p');
+  text.innerText = `Observações: ${object.text}`;
+  element.appendChild(text);
+}
+
 function modifyPage() {
-  const newElement = createElement('section');
   const data = getData();
-  newElement.id('form-data');
-  newElement.innerText = 'teste';
+
+  const getForm = document.getElementById('evaluation-form');
+  getForm.style.visibility = 'hidden';
+
+  const getDiv = document.getElementById('toInfo');
+
+  const newElement = createElement('div');
+  newElement.setAttribute('id', 'form-data');
+  getDiv.appendChild(newElement);
+  applyNameEmailHouseFamily(data, newElement);
+  applyContent(data, newElement);
+  applyRateText(data, newElement);
 }
 
 textarea.addEventListener('keyup', contador);
