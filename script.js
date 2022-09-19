@@ -4,8 +4,9 @@ const btn = document.getElementById('button-one');
 const checkBox = document.getElementById('agreement');
 const textarea = document.getElementById('textarea');
 const counter = document.getElementById('counter');
-const getMain = document.querySelector('main');
+const getContent = document.querySelector('#evaluation-form');
 const btnFinal = document.getElementById('submit-btn');
+const familyCheck = document.getElementsByName('family');
 
 function inputAlert() {
   if ((inputEmail.value === 'tryber@teste.com') && (inputSenha.value === '123456')) {
@@ -41,22 +42,39 @@ function createElement(element) {
   return elementToCreate;
 }
 
+function verifyRadioChecked(elementToCheck) {
+  for (const i of elementToCheck) {
+    if (i.checked) {
+      return i.value;
+    }
+  }
+  return '';
+}
+
+function getData() {
+  const firstName = document.querySelector('#input-name').value;
+  const lastName = document.querySelector('#input-lastname').value;
+  const familyCheck = verifyRadioChecked(familyCheck);
+  const data = {
+    name: `${firstName} ${lastName}`,
+    email: document.querySelector('#input-email').value,
+    house: document.querySelector('#house').value,
+    family: familyCheck,
+    content: [],
+    avaliation:,
+  };
+  return data;
+}
+
 function modifyPage() {
   const newElement = createElement('section');
+  const data = getData();
   newElement.id('form-data');
   newElement.innerText = 'teste';
-  getMain.innerHTML = '';
-  getMain.appendChild(newElement);
-  // const data = {
-  //   name:
-  //   email:
-  //   house:
-  //   family:
 
-  //   avaliation:
-  // }
-  // getMain.innerHTML = null;
-  // const createSave = sessionStorage.setItem('pageInfo', JSON.stringify(argument));
+  getMain.innerHTML = null;
+  const createSave = sessionStorage.setItem('pageInfo', JSON.stringify(argument));
+  getContent.innerHTML = null;
 }
 
 textarea.addEventListener('keyup', contador);
