@@ -23,8 +23,10 @@
     <div class="header-div">
       <form method="GET" class="trybewarts-login">
         <div id="validation">
-          <input id="validation-one" type="email" name="email" placeholder="Email" class="form-control-sm">
-          <input id="validation-two" type="password" name="password" placeholder="Senha" class="form-control-sm">
+          <input id="validation-one" type="email" name="email" placeholder="Email" class="form-control-sm"
+            autocomplete="email">
+          <input id="validation-two" type="password" name="password" placeholder="Senha" class="form-control-sm"
+            autocomplete="current-password">
         </div>
         <button id="button-one" type="submit" class="btn btn-light">Entrar</button>
       </form>
@@ -36,6 +38,7 @@
     <div id="centralizando">
       <div id="form-data"></div>
       <form id="evaluation-form">
+
         <h2 class="display-6">Formulário de Cadastro</h2>
         <p>Preencha os campos abaixo para dar prosseguimento ao cadastro.</p>
 
@@ -62,7 +65,8 @@
             <!-- Requisito 9 -->
             <div class="first-part-form">
               <label for="house">Escolha sua Casa:</label>
-              <select id="house" class="form-control-sm" required>
+              <select id="house" class="form-control-sm">
+                <option value="" hidden disabled selected id="select-option">--selecione uma opção--</option>
                 <option value="Pytherina" id="pytherina-house">Pytherina</option>
                 <option value="Gitnória" id="gitnoria-house">Gitnória</option>
                 <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
@@ -147,7 +151,7 @@
             <div id="movendoTextarea">
               <label class="textarea">Deixe seu comentário:</label>
               <textarea id="textarea" maxlength="500" cols="30" rows="10" class="textarea"></textarea>
-              <div id="counter">500</div>
+              <div id="counter">500 caracteres restantes</div>
             </div>
 
             <!-- Requisito 16 -->

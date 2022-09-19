@@ -30,7 +30,7 @@ function contador(e) {
     const contCar = e.target.maxLength - e.target.textLength;
     counter.innerText = contCar;
   } else {
-    counter.innerText = '500';
+    counter.innerText = '500 caracteres restantes';
   }
 }
 textarea.addEventListener('keyup', contador);
